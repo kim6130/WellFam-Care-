@@ -206,7 +206,7 @@ class MADashboardController:
             self.queueDialog.setAttribute(Qt.WA_DeleteOnClose)
             self.queueDialog.destroyed.connect(lambda: setattr(self, 'queueDialog', None))
 
-            uic.loadUi("wfui/queue.ui", self.queueDialog)
+            uic.loadUi("wfui/mmidwifeui/mqueue.ui", self.queueDialog)
             self.queueDialog.setWindowTitle("View Patient Queue Details")
             self.queueDialog.setWindowIcon(QIcon("wfpics/logo1.jpg"))
 
