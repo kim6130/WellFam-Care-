@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>547</height>
+    <height>544</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>550</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -1133,9 +1139,6 @@ border-radius: 10px;</string>
     <property name="displayFormat">
      <string>MM/dd/yyyy</string>
     </property>
-    <property name="calendarPopup">
-     <bool>true</bool>
-    </property>
    </widget>
    <widget class="QLabel" name="label_24">
     <property name="geometry">
@@ -1176,9 +1179,6 @@ border-radius: 10px;</string>
     </property>
     <property name="displayFormat">
      <string>MM/dd/yyyy</string>
-    </property>
-    <property name="calendarPopup">
-     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_25">
