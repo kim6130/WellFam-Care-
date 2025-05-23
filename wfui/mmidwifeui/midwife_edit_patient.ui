@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MidwifeDialog</class>
- <widget class="QDialog" name="MidwifeDialog">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
+    <width>720</width>
     <height>550</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>550</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="midwifeWidgetaddPat" native="true">
+  <widget class="QWidget" name="widgetaddPat" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -29,11 +35,11 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget #midwifeWidgetaddPat {
+    <string notr="true">QWidget #widgetaddPat {
 	background-color:  rgb(246, 235, 97);
 }</string>
    </property>
-   <widget class="QFrame" name="midwifeFrame">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -58,7 +64,7 @@ color: white;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="midwifeLabel">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -84,7 +90,7 @@ color: white;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_2">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -106,7 +112,7 @@ color: white;</string>
      <string>Last Name</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="midwifePushBtnCancelPat">
+   <widget class="QPushButton" name="pushBtnCancelPat">
     <property name="geometry">
      <rect>
       <x>610</x>
@@ -136,7 +142,7 @@ border-radius: 10px;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_3">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -158,7 +164,7 @@ border-radius: 10px;</string>
      <string>First Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_4">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -180,7 +186,7 @@ border-radius: 10px;</string>
      <string>Date of Birth</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_5">
+   <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -202,7 +208,7 @@ border-radius: 10px;</string>
      <string>Middle Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_6">
+   <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -224,7 +230,7 @@ border-radius: 10px;</string>
      <string>Status</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_7">
+   <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -246,7 +252,7 @@ border-radius: 10px;</string>
      <string>Address</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_8">
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -268,7 +274,7 @@ border-radius: 10px;</string>
      <string>Age</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_9">
+   <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -290,7 +296,7 @@ border-radius: 10px;</string>
      <string>PhilHealth Member</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_10">
+   <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -312,7 +318,7 @@ border-radius: 10px;</string>
      <string>Contact Number</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="midwifeStatusPat">
+   <widget class="QComboBox" name="statusPat">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -355,7 +361,7 @@ border-radius: 10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_11">
+   <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -377,7 +383,7 @@ border-radius: 10px;</string>
      <string>SPOUSE INFORMATION</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="midwifePHMember">
+   <widget class="QComboBox" name="pHMember">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -404,7 +410,7 @@ border-radius: 10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_12">
+   <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -426,7 +432,7 @@ border-radius: 10px;</string>
      <string>PhilHealth No.</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_13">
+   <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -448,7 +454,7 @@ border-radius: 10px;</string>
      <string>Service</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="midwifeServicePat">
+   <widget class="QComboBox" name="servicePat">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -480,7 +486,7 @@ border-radius: 10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatLname">
+   <widget class="QLineEdit" name="lineEditPatLname">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -496,7 +502,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatFname">
+   <widget class="QLineEdit" name="lineEditPatFname">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -512,7 +518,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatMname">
+   <widget class="QLineEdit" name="lineEditPatMname">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -528,7 +534,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatAge">
+   <widget class="QLineEdit" name="lineEditPatAge">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -544,7 +550,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatContact">
+   <widget class="QLineEdit" name="lineEditPatContact">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -560,7 +566,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QDateEdit" name="midwifeDatePatDOB">
+   <widget class="QDateEdit" name="datePatDOB">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -575,8 +581,11 @@ border-radius: 10px;</string>
       <kerning>false</kerning>
      </font>
     </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatAddress">
+   <widget class="QLineEdit" name="lineEditPatAddress">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -595,7 +604,7 @@ border-radius: 10px;</string>
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_14">
+   <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -617,7 +626,7 @@ border-radius: 10px;</string>
      <string>Last Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditSpoLname">
+   <widget class="QLineEdit" name="lineEditSpoLname">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -633,7 +642,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_15">
+   <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -655,7 +664,7 @@ border-radius: 10px;</string>
      <string>First Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_16">
+   <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -677,7 +686,7 @@ border-radius: 10px;</string>
      <string>Middle Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_17">
+   <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -699,7 +708,7 @@ border-radius: 10px;</string>
      <string>Occupation</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_18">
+   <widget class="QLabel" name="label_18">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -721,7 +730,7 @@ border-radius: 10px;</string>
      <string>Date of Birth</string>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_19">
+   <widget class="QLabel" name="label_19">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -743,7 +752,7 @@ border-radius: 10px;</string>
      <string>Contact Number</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditSpoFname">
+   <widget class="QLineEdit" name="lineEditSpoFname">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -759,7 +768,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditSpoMname">
+   <widget class="QLineEdit" name="lineEditSpoMname">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -775,7 +784,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditSpoOccu">
+   <widget class="QLineEdit" name="lineEditSpoOccu">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -791,7 +800,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QDateEdit" name="midwifeDateSpoDOB">
+   <widget class="QDateEdit" name="dateSpoDOB">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -810,7 +819,7 @@ border-radius: 10px;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditSpoContact">
+   <widget class="QLineEdit" name="lineEditSpoContact">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -826,7 +835,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="midwifePushBtnSavePat">
+   <widget class="QPushButton" name="pushBtnSavePat">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -856,7 +865,7 @@ border-radius: 10px;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifePHNum">
+   <widget class="QLineEdit" name="pHNum">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -872,7 +881,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabel_20">
+   <widget class="QLabel" name="label_20">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -894,7 +903,7 @@ border-radius: 10px;</string>
      <string>Occupation</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="midwifeLineEditPatOccu">
+   <widget class="QLineEdit" name="lineEditPatOccu">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -910,46 +919,46 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <zorder>midwifeDatePatDOB</zorder>
-   <zorder>midwifeFrame</zorder>
-   <zorder>midwifeLabel_2</zorder>
-   <zorder>midwifePushBtnCancelPat</zorder>
-   <zorder>midwifeLabel_3</zorder>
-   <zorder>midwifeLabel_4</zorder>
-   <zorder>midwifeLabel_5</zorder>
-   <zorder>midwifeLabel_6</zorder>
-   <zorder>midwifeLabel_7</zorder>
-   <zorder>midwifeLabel_8</zorder>
-   <zorder>midwifeLabel_9</zorder>
-   <zorder>midwifeLabel_10</zorder>
-   <zorder>midwifeStatusPat</zorder>
-   <zorder>midwifeLabel_11</zorder>
-   <zorder>midwifePHMember</zorder>
-   <zorder>midwifeLabel_12</zorder>
-   <zorder>midwifeLabel_13</zorder>
-   <zorder>midwifeServicePat</zorder>
-   <zorder>midwifeLineEditPatLname</zorder>
-   <zorder>midwifeLineEditPatFname</zorder>
-   <zorder>midwifeLineEditPatMname</zorder>
-   <zorder>midwifeLineEditPatAge</zorder>
-   <zorder>midwifeLineEditPatContact</zorder>
-   <zorder>midwifeLineEditPatAddress</zorder>
-   <zorder>midwifeLabel_14</zorder>
-   <zorder>midwifeLineEditSpoLname</zorder>
-   <zorder>midwifeLabel_15</zorder>
-   <zorder>midwifeLabel_16</zorder>
-   <zorder>midwifeLabel_17</zorder>
-   <zorder>midwifeLabel_18</zorder>
-   <zorder>midwifeLabel_19</zorder>
-   <zorder>midwifeLineEditSpoFname</zorder>
-   <zorder>midwifeLineEditSpoMname</zorder>
-   <zorder>midwifeLineEditSpoOccu</zorder>
-   <zorder>midwifeDateSpoDOB</zorder>
-   <zorder>midwifeLineEditSpoContact</zorder>
-   <zorder>midwifePushBtnSavePat</zorder>
-   <zorder>midwifePHNum</zorder>
-   <zorder>midwifeLabel_20</zorder>
-   <zorder>midwifeLineEditPatOccu</zorder>
+   <zorder>datePatDOB</zorder>
+   <zorder>frame</zorder>
+   <zorder>label_2</zorder>
+   <zorder>pushBtnCancelPat</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>statusPat</zorder>
+   <zorder>label_11</zorder>
+   <zorder>pHMember</zorder>
+   <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>servicePat</zorder>
+   <zorder>lineEditPatLname</zorder>
+   <zorder>lineEditPatFname</zorder>
+   <zorder>lineEditPatMname</zorder>
+   <zorder>lineEditPatAge</zorder>
+   <zorder>lineEditPatContact</zorder>
+   <zorder>lineEditPatAddress</zorder>
+   <zorder>label_14</zorder>
+   <zorder>lineEditSpoLname</zorder>
+   <zorder>label_15</zorder>
+   <zorder>label_16</zorder>
+   <zorder>label_17</zorder>
+   <zorder>label_18</zorder>
+   <zorder>label_19</zorder>
+   <zorder>lineEditSpoFname</zorder>
+   <zorder>lineEditSpoMname</zorder>
+   <zorder>lineEditSpoOccu</zorder>
+   <zorder>dateSpoDOB</zorder>
+   <zorder>lineEditSpoContact</zorder>
+   <zorder>pushBtnSavePat</zorder>
+   <zorder>pHNum</zorder>
+   <zorder>label_20</zorder>
+   <zorder>lineEditPatOccu</zorder>
   </widget>
  </widget>
  <resources/>
