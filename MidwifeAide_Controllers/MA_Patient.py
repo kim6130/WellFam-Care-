@@ -9,7 +9,7 @@ from PyQt5.QtGui import QIcon
 import sys
 
 from Database import connect_db
-from Admin_Controllers.Admin_Patient_View.View_Patient_Category import ViewPatientDialog
+from MidwifeAide_Controllers.MA_Patient_View.MA_ViewPatCat import ViewPatientDialog
 
 class MAPatientController:
     def __init__(self, tableWidPat: QTableWidget, search: QLineEdit, user_id):
@@ -53,7 +53,7 @@ class MAPatientController:
 
     def add_patient_dialog(self):
         dialog = QDialog()
-        uic.loadUi("wfui/midwife_add_patient.ui", dialog)
+        uic.loadUi("wfui/midwifeui/midwife_add_patient.ui", dialog)
         dialog.setWindowTitle("Add New Patient")
         dialog.setWindowIcon(QIcon("wfpics/logo1.jpg"))
         
