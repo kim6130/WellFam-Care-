@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>midwifeDialog</class>
- <widget class="QDialog" name="midwifeDialog">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,12 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Midwife Dialog</string>
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(246, 235, 97);</string>
   </property>
-  <widget class="QWidget" name="midwifeWidgetFiles" native="true">
+  <widget class="QWidget" name="widgetFiles" native="true">
    <property name="geometry">
     <rect>
      <x>-1</x>
@@ -25,7 +25,7 @@
      <height>501</height>
     </rect>
    </property>
-   <widget class="QLineEdit" name="midwifeLineEditSearchTrash">
+   <widget class="QLineEdit" name="lineEditSearchTrash">
     <property name="geometry">
      <rect>
       <x>539</x>
@@ -65,7 +65,7 @@ border-radius: 5px;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="midwifeLabelFileName">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -89,7 +89,7 @@ border-radius: 5px;</string>
      <string>File Name</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="midwifeTableWidgetTrash">
+   <widget class="QTableWidget" name="tableWidgetTrash">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -148,7 +148,7 @@ QTableWidget::item {
      </property>
     </column>
    </widget>
-   <widget class="QFrame" name="midwifeFrameHeader">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
       <x>-1</x>
@@ -167,7 +167,7 @@ color: white;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="midwifeLabelHeader">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>210</x>
