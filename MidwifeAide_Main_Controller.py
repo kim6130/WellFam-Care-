@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import (
     QApplication, QDialog, QMessageBox, QStackedWidget, 
     QPushButton, QLabel, QCalendarWidget, QLineEdit, 
-    QTableWidget, QWidget, QComboBox
+    QTableWidget, QWidget, QComboBox, QFrame, 
 )
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon, QPixmap
@@ -9,8 +9,7 @@ import sys
 import os
 
 from MidwifeAide_Controllers.MA_Dashboard import MADashboardController
-from MidwifeAide_Controllers.MA_Patient import MAPatientController
-from MidwifeAide_Controllers.MA_Appointment import MAAppointmentController
+# from MidwifeAide_Controllers.MA_Reports import MAReportController
 
 from Database import connect_db
 
@@ -37,17 +36,19 @@ class MidwifeMainWindow(QDialog):
         else:
             print("QLabel for profile picture not found!")
 
-        self.stackedWidget = self.findChild(QStackedWidget, "MidwifestackedWidget")
-        self.home_button = self.findChild(QPushButton, "MidwifepushBtnHome")
+        self.stackedWidget = self.findChild(QStackedWidget, "stackedWidget")
+        self.home_button = self.findChild(QPushButton, "pushBtnHome")
         self.patients_button = self.findChild(QPushButton, "pushBtnPatient")
         self.appointments_button = self.findChild(QPushButton, "pushBtnAppointments")
         self.files_button = self.findChild(QPushButton, "pushBtnFiles")
+        self.report_button = self.findChild(QPushButton, "pushBtnReports")
         self.settings_button = self.findChild(QPushButton, "pushBtnSettings")
 
         self.home_button.clicked.connect(self.dashboard)
         self.patients_button.clicked.connect(self.patient)
         self.appointments_button.clicked.connect(self.appointment)
         self.files_button.clicked.connect(self.files)
+        self.report_button.clicked.connect(self.report)
         self.settings_button.clicked.connect(self.settings)
 
         self.logout_button = self.findChild(QPushButton, "pushBtnLogout")
@@ -104,11 +105,11 @@ class MidwifeMainWindow(QDialog):
         self.set_active_button(self.patients_button)
         self.tableWidPat = self.findChild(QTableWidget, "tableWidgetPat")
         self.searchPat = self.findChild(QLineEdit, "lineEditSearchPat")
-        self.patient_controller = MAPatientController(self.tableWidPat, self.searchPat, self.user_id)
+        # self.patient_controller = MAPatientController(self.tableWidPat, self.searchPat, self.user_id)
 
-        self.addPat_button = self.findChild(QPushButton, "pushBtnAddNPat")
-        if self.addPat_button:
-            self.addPat_button.clicked.connect(self.patient_controller.add_patient_dialog)
+        # self.addPat_button = self.findChild(QPushButton, "pushBtnAddNPat")
+        # if self.addPat_button:
+        #     self.addPat_button.clicked.connect(self.patient_controller.add_patient_dialog)
 
        
     def appointment(self):
@@ -118,11 +119,11 @@ class MidwifeMainWindow(QDialog):
         self.tableWidApp = self.findChild(QTableWidget, "tableWidgetApp")
         self.searchApp = self.findChild(QLineEdit, "lineEditSearchApp")
         self.sortAppCombo = self.findChild(QComboBox, "sortAppBtn")
-        self.appointment_controller = MAAppointmentController(self.tableWidApp, self.searchApp, self.sortAppCombo)
+        #  self.appointment_controller = MAAppointmentController(self.tableWidApp, self.searchApp, self.sortAppCombo)
         
-        self.addApp_button = self.findChild(QPushButton, "pushBtnAddApp")
-        if self.addApp_button:
-            self.addApp_button.clicked.connect(self.appointment_controller.add_appointment_dialog)
+        # self.addApp_button = self.findChild(QPushButton, "pushBtnAddApp")
+        # if self.addApp_button:
+        #     self.addApp_button.clicked.connect(self.appointment_controller.add_appointment_dialog)
 
 
     def files(self):
@@ -130,6 +131,18 @@ class MidwifeMainWindow(QDialog):
         self.stackedWidget.setCurrentIndex(3)
         self.set_active_button(self.files_button)
         self.tableWidFolder = self.findChild(QTableWidget, "")
+
+    def report(self):
+        self.clear()
+        self.stackedWidget.setCurrentIndex(5)
+        self.set_active_button(self.report_button)
+        self.servicesAvailed = self.findChild(QFrame, "serviceAvailed")
+        self.pregNo = self.findChild(QFrame, "pregPat")
+        self.notpregNo = self.findChild(QFrame, "notpregPat")
+        self.lineChart = self.findChild(QFrame, "lineChart")
+        self.monthlyVServ = self.findChild(QFrame, "visitsService")
+        # self.report_controller = MAReportController(self.servicesAvailed, self.lineChart, self.pregNo, self.notpregNo, self.monthlyVServ)
+        # self.report_controller.line_chart()
 
     def settings(self):
         self.clear()
@@ -139,13 +152,13 @@ class MidwifeMainWindow(QDialog):
         self.midwifePFname = self.findChild(QLabel, "midwifePFname")
         self.midwifePContact = self.findChild(QLabel, "midwifePContact")
 
-        self.midwifep_controller = MADashboardController(self.midwifePWidget, self.midwifePLname, self.midwifePFname, self.midwifePContact)
-        self.midwifep_controller.set_username(self.username)
-        self.midwifep_controller.load_midwife_info()
+        # self.midwifep_controller = MADashboardController(self.midwifePWidget, self.midwifePLname, self.midwifePFname, self.midwifePContact)
+        # self.midwifep_controller.set_username(self.username)
+        # self.midwifep_controller.load_midwife_info()
 
-        self.editMidwife_button = self.findChild(QPushButton, "viewMidwifeProfile")
-        if self.editMidwife_button:
-            self.editMidwife_button.clicked.connect(self.midwifep_controller.view_edit_dialog)
+        # self.editMidwife_button = self.findChild(QPushButton, "viewMidwifeProfile")
+        # if self.editMidwife_button:
+        #     self.editMidwife_button.clicked.connect(self.midwifep_controller.view_edit_dialog)
 
     def clear(self):
         for widget in self.stackedWidget.currentWidget().findChildren(QLineEdit):
