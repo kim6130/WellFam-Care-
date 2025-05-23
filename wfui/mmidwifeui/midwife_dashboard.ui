@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MidwifeDialog</class>
- <widget class="QDialog" name="MidwifeDialog">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -19,11 +19,371 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QWidget" name="widgetMainL" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>250</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;</string>
+   </property>
+   <widget class="QLabel" name="labelLogo0">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../wfpics/logo0.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="appName">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 51, 102);</string>
+    </property>
+    <property name="text">
+     <string>WellFam Care</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="userPic">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>160</y>
+      <width>130</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid  rgb(0, 51, 102);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="midwifeUName">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(246, 235, 97);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnHome">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>350</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton[active=&quot;true&quot;] {
+	background-color: rgb(246, 235, 97);
+	color:  rgb(0, 51, 102);
+}
+
+QPushButton {
+	background-color: rgb(0, 51, 102);
+	color: white;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #2980b9;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnPatient">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>390</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton[active=&quot;true&quot;] {
+	background-color: rgb(246, 235, 97);
+	color:  rgb(0, 51, 102);
+}
+
+QPushButton {
+	background-color: rgb(0, 51, 102);
+	color: white;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #2980b9;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Patients</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnAppointments">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>430</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton[active=&quot;true&quot;] {
+	background-color: rgb(246, 235, 97);
+	color:  rgb(0, 51, 102);
+}
+
+QPushButton {
+	background-color: rgb(0, 51, 102);
+	color: white;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #2980b9;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Appointments</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnReports_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>510</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton[active=&quot;true&quot;] {
+	background-color: rgb(246, 235, 97);
+	color:  rgb(0, 51, 102);
+}
+
+QPushButton {
+	background-color: rgb(0, 51, 102);
+	color: white;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #2980b9;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Reports</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnLogout">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>660</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Logout</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../.designer/wfpics/logoutlogo.png</normaloff>../../../.designer/wfpics/logoutlogo.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnFiles">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>470</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton[active=&quot;true&quot;] {
+	background-color: rgb(246, 235, 97);
+	color:  rgb(0, 51, 102);
+}
+
+QPushButton {
+	background-color: rgb(0, 51, 102);
+	color: white;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #2980b9;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBtnSettings">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>660</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../wfpics/settinglogo.png</normaloff>../../wfpics/settinglogo.png</iconset>
+    </property>
+   </widget>
+  </widget>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>0</y>
+     <x>249</x>
+     <y>-1</y>
      <width>1131</width>
      <height>701</height>
     </rect>
@@ -31,7 +391,7 @@
    <property name="styleSheet">
     <string notr="true">background-color: rgb(246, 235, 97);</string>
    </property>
-   <widget class="QStackedWidget" name="MidwifestackedWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -50,7 +410,7 @@
      <number>0</number>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageHome">
      <widget class="QLabel" name="greetingLabel">
@@ -107,7 +467,7 @@ border-radius: 10px;</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="midwifeCalendar">
+     <widget class="QCalendarWidget" name="adminCalendar">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -841,7 +1201,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/addIcon.png</normaloff>../../wfpics/addIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/addIcon.png</normaloff>../../../.designer/wfpics/addIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -914,7 +1274,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/trashIcon.png</normaloff>../../wfpics/trashIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/trashIcon.png</normaloff>../../../.designer/wfpics/trashIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -1191,7 +1551,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/addIcon.png</normaloff>../../wfpics/addIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/addIcon.png</normaloff>../../../.designer/wfpics/addIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -1224,7 +1584,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/trashIcon.png</normaloff>../../wfpics/trashIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/trashIcon.png</normaloff>../../../.designer/wfpics/trashIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -1519,7 +1879,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/addIcon.png</normaloff>../../wfpics/addIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/addIcon.png</normaloff>../../../.designer/wfpics/addIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -1552,7 +1912,7 @@ border-radius: 10px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../wfpics/trashIcon.png</normaloff>../../wfpics/trashIcon.png</iconset>
+        <normaloff>../../../.designer/wfpics/trashIcon.png</normaloff>../../../.designer/wfpics/trashIcon.png</iconset>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -1736,6 +2096,137 @@ border-radius: 5px;</string>
        <enum>Qt::LogicalMoveStyle</enum>
       </property>
       <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageReports">
+     <widget class="QLabel" name="label_Reports">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>80</y>
+        <width>350</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 51, 102);</string>
+      </property>
+      <property name="text">
+       <string>Clinic Reports</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="reportType">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>90</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 5px;</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reportTypeName">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>170</y>
+        <width>351</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="indent">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidgetReport">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>230</y>
+        <width>871</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="reportDateRange">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>130</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 51, 102);
+color: white;
+border-radius: 5px;</string>
+      </property>
+      <property name="editable">
        <bool>false</bool>
       </property>
      </widget>
@@ -2063,7 +2554,7 @@ border-radius: 10px;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="midwifeInfoLabel">
+     <widget class="QLabel" name="adminInfoLabel">
       <property name="geometry">
        <rect>
         <x>600</x>
@@ -2092,7 +2583,7 @@ border-radius: 10px;</string>
        <number>20</number>
       </property>
      </widget>
-     <widget class="QWidget" name="midwifeInfo" native="true">
+     <widget class="QWidget" name="adminInfo" native="true">
       <property name="geometry">
        <rect>
         <x>600</x>
@@ -2102,7 +2593,7 @@ border-radius: 10px;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QWidget #midwifeInfo {
+       <string notr="true">QWidget #adminInfo {
 	background-color: white;
 	color:  rgb(0, 51, 102);
 	border: 2px solid rgb(0, 51, 102);
@@ -2131,7 +2622,7 @@ border-radius: 10px;</string>
 color:  rgb(0, 51, 102);</string>
        </property>
        <property name="text">
-        <string>Last Name:</string>
+        <string>Midwife Last Name:</string>
        </property>
       </widget>
       <widget class="QLabel" name="OP">
@@ -2156,7 +2647,7 @@ color:  rgb(0, 51, 102);</string>
 color:  rgb(0, 51, 102);</string>
        </property>
        <property name="text">
-        <string>First Name:</string>
+        <string>Midwife First Name:</string>
        </property>
       </widget>
       <widget class="QLabel" name="NP">
@@ -2181,10 +2672,10 @@ color:  rgb(0, 51, 102);</string>
 color:  rgb(0, 51, 102);</string>
        </property>
        <property name="text">
-        <string>Contact Number:</string>
+        <string>Midwife Contact Number:</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="viewMidwifeProfile">
+      <widget class="QPushButton" name="viewAdminProfile">
        <property name="geometry">
         <rect>
          <x>310</x>
@@ -2210,7 +2701,7 @@ border-radius: 10px;</string>
         <string>View Profile</string>
        </property>
       </widget>
-      <widget class="QLabel" name="maPLname">
+      <widget class="QLabel" name="adminPLname">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -2239,7 +2730,7 @@ border-radius: 10px;</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="maPFname">
+      <widget class="QLabel" name="adminPFname">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -2268,7 +2759,7 @@ border-radius: 10px;</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="midwifePContact">
+      <widget class="QLabel" name="adminPContact">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -2299,327 +2790,6 @@ border-radius: 10px;</string>
       </widget>
      </widget>
     </widget>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="widgetMainL" native="true">
-   <property name="geometry">
-    <rect>
-     <x>1</x>
-     <y>1</y>
-     <width>250</width>
-     <height>700</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>700</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: white;</string>
-   </property>
-   <widget class="QLabel" name="labelLogo0">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>191</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../wfpics/logo0.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="appName">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>110</y>
-      <width>191</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Black</family>
-      <pointsize>20</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 51, 102);</string>
-    </property>
-    <property name="text">
-     <string>WellFam Care</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="userPic">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>160</y>
-      <width>130</width>
-      <height>120</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border: 2px solid  rgb(0, 51, 102);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="midwifeUName">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>290</y>
-      <width>150</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(246, 235, 97);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="MidwifepushBtnHome">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>350</y>
-      <width>150</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton[active=&quot;true&quot;] {
-	background-color: rgb(246, 235, 97);
-	color:  rgb(0, 51, 102);
-}
-
-QPushButton {
-	background-color: rgb(0, 51, 102);
-	color: white;
-	border-radius: 10px;
-}
-
-QPushButton:hover {
-	background-color: #2980b9;
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Home</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushBtnPatient">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>390</y>
-      <width>150</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton[active=&quot;true&quot;] {
-	background-color: rgb(246, 235, 97);
-	color:  rgb(0, 51, 102);
-}
-
-QPushButton {
-	background-color: rgb(0, 51, 102);
-	color: white;
-	border-radius: 10px;
-}
-
-QPushButton:hover {
-	background-color: #2980b9;
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Patients</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushBtnAppointments">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>430</y>
-      <width>150</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton[active=&quot;true&quot;] {
-	background-color: rgb(246, 235, 97);
-	color:  rgb(0, 51, 102);
-}
-
-QPushButton {
-	background-color: rgb(0, 51, 102);
-	color: white;
-	border-radius: 10px;
-}
-
-QPushButton:hover {
-	background-color: #2980b9;
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Appointments</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushBtnSettings">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>660</y>
-      <width>25</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 51, 102);
-color: white;
-border-radius: 10px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../wfpics/settinglogo.png</normaloff>../../wfpics/settinglogo.png</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushBtnLogout">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>660</y>
-      <width>70</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 51, 102);
-color: white;
-border-radius: 10px;</string>
-    </property>
-    <property name="text">
-     <string>Logout</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../wfpics/logoutlogo.png</normaloff>../../wfpics/logoutlogo.png</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushBtnFiles">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>470</y>
-      <width>150</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton[active=&quot;true&quot;] {
-	background-color: rgb(246, 235, 97);
-	color:  rgb(0, 51, 102);
-}
-
-QPushButton {
-	background-color: rgb(0, 51, 102);
-	color: white;
-	border-radius: 10px;
-}
-
-QPushButton:hover {
-	background-color: #2980b9;
-}
-</string>
-    </property>
-    <property name="text">
-     <string>File</string>
-    </property>
    </widget>
   </widget>
  </widget>
