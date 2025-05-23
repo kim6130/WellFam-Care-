@@ -139,7 +139,7 @@ class MADashboardController:
         
         header = self.tableWidQueue.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Fixed)
-        column_sizes = [80, 98, 250, 160, 180, 100, 160]
+        column_sizes = [80, 98, 250, 160, 180, 100]
         for i, size in enumerate(column_sizes):
             header.resizeSection(i, size)
         
@@ -155,7 +155,6 @@ class MADashboardController:
                     COALESCE(string_agg(DISTINCT s.SERV_NAME, ', '), '') AS services,
                     COALESCE(string_agg(DISTINCT st.SERV_TYPE_NAME, ', '), '') AS appointment_types,
                     qs.QUEUE_STATUS_NAME,
-                    CONCAT(stf.STAFF_LNAME, ', ', stf.STAFF_FNAME) AS staff_name,
                     CASE qs.QUEUE_STATUS_NAME
                         WHEN 'Being Attended' THEN 1
                         WHEN 'Waiting' THEN 2
@@ -166,7 +165,6 @@ class MADashboardController:
                 FROM 
                     APPOINTMENT a
                 JOIN PATIENT p ON a.PAT_ID = p.PAT_ID
-                JOIN USER_STAFF stf ON a.STAFF_ID = stf.STAFF_ID
                 JOIN QUEUE_STATUS qs ON a.QUEUE_STATUS_ID = qs.QUEUE_STATUS_ID
                 LEFT JOIN APPOINTMENT_SERVICE aps ON a.APP_ID = aps.APP_ID
                 LEFT JOIN APPOINTMENT_SERVICE_TYPE ast ON aps.APS_ID = ast.APS_ID
@@ -179,7 +177,7 @@ class MADashboardController:
                     AND qs.QUEUE_STATUS_NAME != 'Cancelled'
                     AND a.APP_ISDELETED = FALSE
                 GROUP BY 
-                    a.QUEUE_NUM, p.PAT_LNAME, p.PAT_FNAME, a.APP_TIME, qs.QUEUE_STATUS_NAME, stf.STAFF_LNAME, stf.STAFF_FNAME
+                    a.QUEUE_NUM, p.PAT_LNAME, p.PAT_FNAME, a.APP_TIME, qs.QUEUE_STATUS_NAME
                 ORDER BY 
                     status_order ASC, a.QUEUE_NUM ASC;
             """)
@@ -189,7 +187,7 @@ class MADashboardController:
             for row in rows:
                 row_position = self.tableWidQueue.rowCount()
                 self.tableWidQueue.insertRow(row_position)
-                for column, data in enumerate(row):
+                for column, data in enumerate(row[:6]):  # Only take first 6 columns (excluding staff name)
                     self.tableWidQueue.setItem(row_position, column, QTableWidgetItem(str(data)))
 
         except Exception as e:
@@ -241,8 +239,8 @@ class MADashboardController:
             self.saveButton.clicked.connect(self.save_queue_update)
         
         queue_no = self.tableWidQueue.item(row, 0).text()
-        patient_name = self.tableWidQueue.item(row, 1).text()
-        app_time = self.tableWidQueue.item(row, 2).text()
+        patient_name = self.tableWidQueue.item(row, 2).text()
+        app_time = self.tableWidQueue.item(row, 1).text()
 
         self.queueNo.setText(queue_no)
         self.queueNo.setEnabled(False)
