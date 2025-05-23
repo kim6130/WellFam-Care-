@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mw_Dialog</class>
- <widget class="QDialog" name="mw_Dialog">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>718</width>
-    <height>549</height>
+    <width>720</width>
+    <height>550</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>550</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="mw_widgetAddApp" native="true">
+  <widget class="QWidget" name="widgetAddApp" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -35,11 +41,11 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget #mw_widgetAddApp {
+    <string notr="true">QWidget #widgetAddApp {
 	background-color:  rgb(246, 235, 97);
 }</string>
    </property>
-   <widget class="QFrame" name="mw_frame">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -64,7 +70,7 @@ color: white;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="mw_label">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -90,7 +96,7 @@ color: white;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="mw_label_2">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -112,7 +118,7 @@ color: white;</string>
      <string>Patient Name</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="mw_pushBtnCancelApp">
+   <widget class="QPushButton" name="pushBtnCancelApp">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -142,7 +148,7 @@ border-radius: 10px;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_3">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -164,7 +170,7 @@ border-radius: 10px;</string>
      <string>Service/s Availed:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_4">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -186,7 +192,7 @@ border-radius: 10px;</string>
      <string>Time</string>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_5">
+   <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -208,7 +214,7 @@ border-radius: 10px;</string>
      <string>Date</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="mw_pushBtnSaveApp">
+   <widget class="QPushButton" name="pushBtnSaveApp">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -238,7 +244,7 @@ border-radius: 10px;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QDateEdit" name="mw_dateEditAppDate">
+   <widget class="QDateEdit" name="dateEditAppDate">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -256,11 +262,8 @@ border-radius: 10px;</string>
     <property name="displayFormat">
      <string>MM/dd/yyyy</string>
     </property>
-    <property name="calendarPopup">
-     <bool>true</bool>
-    </property>
    </widget>
-   <widget class="QTimeEdit" name="mw_timeEditAppTime">
+   <widget class="QTimeEdit" name="timeEditAppTime">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -275,11 +278,8 @@ border-radius: 10px;</string>
       <pointsize>10</pointsize>
      </font>
     </property>
-    <property name="calendarPopup">
-     <bool>true</bool>
-    </property>
    </widget>
-   <widget class="QPushButton" name="mw_btnSearchPatient">
+   <widget class="QPushButton" name="btnSearchPatient">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -292,7 +292,7 @@ border-radius: 10px;</string>
      <string>Select Patient</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="mw_lineEditSelectedPatient">
+   <widget class="QLineEdit" name="lineEditSelectedPatient">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -309,7 +309,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QComboBox" name="mw_comboBoxAttendant">
+   <widget class="QComboBox" name="comboBoxAttendant">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -337,7 +337,7 @@ border-radius: 10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QTextEdit" name="mw_textEditAppNotes">
+   <widget class="QTextEdit" name="textEditAppNotes">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -353,7 +353,7 @@ border-radius: 10px;</string>
      </font>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxFamPlan">
+   <widget class="QCheckBox" name="checkBoxFamPlan">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -374,7 +374,7 @@ border-radius: 10px;</string>
      <string>Family Planning</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxMatCare">
+   <widget class="QCheckBox" name="checkBoxMatCare">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -395,7 +395,7 @@ border-radius: 10px;</string>
      <string>Maternal Care Package</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxCounseling">
+   <widget class="QCheckBox" name="checkBoxCounseling">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -414,7 +414,7 @@ border-radius: 10px;</string>
      <string>Counseling</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxIUD">
+   <widget class="QCheckBox" name="checkBoxIUD">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -433,7 +433,7 @@ border-radius: 10px;</string>
      <string>IUD Insertion/Removal</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxCondom">
+   <widget class="QCheckBox" name="checkBoxCondom">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -452,7 +452,7 @@ border-radius: 10px;</string>
      <string>Condom</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxInjectible">
+   <widget class="QCheckBox" name="checkBoxInjectible">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -471,7 +471,7 @@ border-radius: 10px;</string>
      <string>Injectible</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxPills">
+   <widget class="QCheckBox" name="checkBoxPills">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -490,7 +490,7 @@ border-radius: 10px;</string>
      <string>Pills</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxPrenatal">
+   <widget class="QCheckBox" name="checkBoxPrenatal">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -509,7 +509,7 @@ border-radius: 10px;</string>
      <string>Prenatal Care</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxLaborMonitoring">
+   <widget class="QCheckBox" name="checkBoxLaborMonitoring">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -528,7 +528,7 @@ border-radius: 10px;</string>
      <string>Labor Monitoring</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxNSD">
+   <widget class="QCheckBox" name="checkBoxNSD">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -547,7 +547,7 @@ border-radius: 10px;</string>
      <string>NSD</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxPostpartumCare">
+   <widget class="QCheckBox" name="checkBoxPostpartumCare">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -566,7 +566,7 @@ border-radius: 10px;</string>
      <string>Postpartum Care</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxPS">
+   <widget class="QCheckBox" name="checkBoxPS">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -587,7 +587,7 @@ border-radius: 10px;</string>
      <string>Pap Smear</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="mw_checkBoxPapSmearService">
+   <widget class="QCheckBox" name="checkBoxPapSmearService">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -606,7 +606,7 @@ border-radius: 10px;</string>
      <string>Pap Smear Service</string>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_7">
+   <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -628,7 +628,7 @@ border-radius: 10px;</string>
      <string>Attendant/Midwife/Nursing Aide</string>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_8">
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -650,7 +650,7 @@ border-radius: 10px;</string>
      <string>Appointment Notes:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="mw_label_9">
+   <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -672,7 +672,7 @@ border-radius: 10px;</string>
      <string>Queue No.:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="mw_lineEditQueueNumber">
+   <widget class="QLineEdit" name="lineEditQueueNumber">
     <property name="geometry">
      <rect>
       <x>550</x>
@@ -694,7 +694,7 @@ border-radius: 10px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QGroupBox" name="mw_appointmentType">
+   <widget class="QGroupBox" name="appointmentType">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -721,7 +721,7 @@ border-radius: 10px;</string>
     <property name="title">
      <string>Select Appointment Type:</string>
     </property>
-    <widget class="QGroupBox" name="mw_groupBoxFamPlan">
+    <widget class="QGroupBox" name="groupBoxFamPlan">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -741,7 +741,7 @@ border-radius: 10px;</string>
      <property name="title">
       <string>Family Planning</string>
      </property>
-     <widget class="QCheckBox" name="mw_checkBoxFPCounseling">
+     <widget class="QCheckBox" name="checkBoxFPCounseling">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -760,7 +760,7 @@ border-radius: 10px;</string>
        <string>Counseling</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxFPIUD">
+     <widget class="QCheckBox" name="checkBoxFPIUD">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -779,7 +779,7 @@ border-radius: 10px;</string>
        <string>IUD I/R</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxFPCondom">
+     <widget class="QCheckBox" name="checkBoxFPCondom">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -798,7 +798,7 @@ border-radius: 10px;</string>
        <string>Condom</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxFPInjectible">
+     <widget class="QCheckBox" name="checkBoxFPInjectible">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -817,7 +817,7 @@ border-radius: 10px;</string>
        <string>Injectible</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxFPPills">
+     <widget class="QCheckBox" name="checkBoxFPPills">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -837,7 +837,7 @@ border-radius: 10px;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="mw_groupBoxMatCare">
+    <widget class="QGroupBox" name="groupBoxMatCare">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -857,7 +857,7 @@ border-radius: 10px;</string>
      <property name="title">
       <string>Maternal Care</string>
      </property>
-     <widget class="QCheckBox" name="mw_checkBoxMCPrenatal">
+     <widget class="QCheckBox" name="checkBoxMCPrenatal">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -876,7 +876,7 @@ border-radius: 10px;</string>
        <string>Prenatal Care</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxMCLaborMonitoring">
+     <widget class="QCheckBox" name="checkBoxMCLaborMonitoring">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -895,7 +895,7 @@ border-radius: 10px;</string>
        <string>Labor Monitor</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxMCNSD">
+     <widget class="QCheckBox" name="checkBoxMCNSD">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -914,7 +914,7 @@ border-radius: 10px;</string>
        <string>NSD</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mw_checkBoxMCPostpartum">
+     <widget class="QCheckBox" name="checkBoxMCPostpartum">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -934,7 +934,7 @@ border-radius: 10px;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="mw_groupBoxPS">
+    <widget class="QGroupBox" name="groupBoxPS">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -954,7 +954,7 @@ border-radius: 10px;</string>
      <property name="title">
       <string>Pap Smear</string>
      </property>
-     <widget class="QCheckBox" name="mw_checkBoxPSPapSmearService">
+     <widget class="QCheckBox" name="checkBoxPSPapSmearService">
       <property name="geometry">
        <rect>
         <x>10</x>
